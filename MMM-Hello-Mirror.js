@@ -9,9 +9,9 @@ Module.register("MMM-Hello-Mirror", {
 
 	// Default module config.
     defaults: {
-        language: "de",
+        language: "en",
         voice: "Deutsch Female",
-        wakeUp: "Hallo (magischer) Spiegel",
+        wakeUp: "Hey Jarvis",
         animationSpeed: 2000,
         debug: true,
         broadcastEvents: true
@@ -81,7 +81,7 @@ Module.register("MMM-Hello-Mirror", {
             // ... for other languages (should be english)
             } else {
                 var commands = {
-                    'Hi (magic) mirror *command': function(command) {
+                    'Hi Jarvis *command': function(command) {
                         Log.info('Voice command recognized in module ' + self.name + ': ' + command);
                         if (self.config.broadcastEvents) {
                             self.sendNotification("VOICE_COMMAND", command);
